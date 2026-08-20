@@ -34,9 +34,25 @@ def mul_matrix(input_matrix):
                
     return c
 
-print("1.Addition||2.Multiplication")
+def sub_matrix(input_matrix):
+    a,b,r,cl=input_matrix()
+    c=[]
+    for i in range(r):
+        row=[]
+        for j in range(cl):
+            result=a[i][j]-b[i][j]
+            row.append(result)
+        c.append(row)
+    for row in c:
+        print(row)
+    return c    
+
+
+print("1.Addition||2.Multiplication||3.Subtraction")
 o=int(input("Enter the option: "))
 if o==1:
     add_matrix(input_matrix)
 elif o==2:
     mul_matrix(input_matrix)
+elif o==3:
+    sub_matrix(input_matrix)
